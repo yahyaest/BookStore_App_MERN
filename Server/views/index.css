@@ -1,0 +1,39 @@
+body {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center !important;
+}
+
+.urls__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.url__link {
+  color: black;
+  font-size: 1.125em;
+  margin: 5px;
+}
+
+#token_display {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  border: solid black 1px;
+  padding: 20px;
+}
+
+#token_label {
+  width: 25%;
+}
+
+#token_text {
+  width: 75%;
+}

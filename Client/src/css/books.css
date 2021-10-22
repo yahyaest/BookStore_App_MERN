@@ -1,0 +1,225 @@
+/* books component */
+.books {
+  margin-top: 100px;
+}
+
+.books__cards {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.book__card {
+  width: 18rem;
+  margin: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.book__card:hover {
+  transform: scale(1.05);
+}
+
+.carousel__img {
+  width: 150px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.carousel__title p {
+  font-size: 24px;
+}
+
+.carousel__img:hover {
+  transform: scale(1.1);
+}
+
+.books__filters {
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.books__search {
+  width: 50%;
+  margin: auto;
+}
+
+.search_btn {
+  font-size: 0.7rem !important;
+}
+
+.book__buttons {
+  display: flex;
+}
+
+/* book component */
+.book__component {
+  width: 65%;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+.book__title__android {
+  display: none;
+}
+
+.book__img {
+  width: 40%;
+  margin-top: 100px;
+}
+
+.book__info {
+  width: 60%;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.favourite_btn,
+.cart_btn {
+  margin: 20px;
+}
+
+.comments__component {
+  width: 65%;
+  margin: auto;
+  text-align: left;
+}
+
+.text__controller {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.pagination {
+  margin-top: 50px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+  /* books component */
+  .book__component {
+    width: 70%;
+  }
+  .favourite_btn,
+  .cart_btn {
+    font-size: 0.6rem !important;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .books__cards {
+    width: 85%;
+  }
+
+  /* books component */
+  .book__component {
+    width: 80%;
+  }
+
+  .favourite_btn,
+  .cart_btn {
+    font-size: 0.6rem !important;
+    padding: 10px 10px !important;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  /* books component */
+  .books {
+    margin-top: 50px;
+  }
+
+  .carousel__title p {
+    font-size: 16px;
+  }
+
+  .carousel__img {
+    width: 100px;
+  }
+
+  .books__search {
+    width: 80%;
+    margin: auto;
+  }
+
+  .books__cards {
+    width: 80%;
+  }
+
+  .book__buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /* book component */
+  .book__component {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+
+  .book__title {
+    display: none;
+  }
+
+  .book__title__android {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .book__img {
+    width: 60%;
+    margin-top: 20px;
+    margin: auto;
+  }
+
+  .book__info {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .book__info h3 {
+    font-size: 1rem;
+  }
+
+  .book__info h5 {
+    font-size: 0.9rem;
+  }
+
+  .book__info h6 {
+    font-size: 0.75rem;
+  }
+
+  .book__info p {
+    font-size: 0.6rem;
+    text-align: left;
+  }
+
+  .book__info button {
+    width: 100px;
+    font-size: 8px;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+  }
+
+  .book__author {
+    margin-top: 20px;
+  }
+
+  .favourite_btn,
+  .cart_btn {
+    font-size: 0.4rem !important;
+    padding: 8px 8px !important;
+  }
+}

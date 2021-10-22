@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+ <link rel="stylesheet" href="./index.css">
+  <script type="module" src="./viewScript.js"></script>
+
+ <title><%=title %></title>
+</head>
+<body>
+  <h1 ><%= message %></h1>
+  <div class="login" id="login">
+    <label for="username">Username : </label>
+    <input id="username" type="text">
+    <label for="password">Password : </label>
+    <input id="password" type="password">
+    <button class="<%= authUrl%>" id="login-button">Login</button>
+  </div>
+  <div class="urls__list">
+  
+   <a href="<%= usersUrl%>" class="url__link">Users</a>
+   <a href="<%= booksUrl%>" class="url__link">Books</a>
+   <!-- <a href="<%= profilesUrl%>" class="url__link">Profiles</a> -->
+   <a href="<%= commentsUrl%>" class="url__link">Comments</a>
+  <a href="<%= ordersUrl%>" class="url__link">Orders</a>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+docker exec -it mongodb bash 
+mongodump --db test  // Run at this path : C:\Program Files\MongoDB\Tools\100\bin
+mongodump --db test --out=/d/Career/Database/MongoDb
+mongorestore --username yahya_machat  --password secret /backup/bookstoreDocker-app/users.bson
+
+mongodb+srv://yahya:<password>@cluster0.kf0nx.mongodb.net/bookstore-app
+mongodb+srv://yahya:25020680@cluster0.kf0nx.mongodb.net/bookstore-app

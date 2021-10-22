@@ -1,0 +1,49 @@
+version: "3.8"
+services:
+  mongodb:
+    image: "mongo"
+    container_name: mongodb
+    volumes:
+      - data:/data/db
+      - ./Database/bookstoreDocker-app:/backup/bookstoreDocker-app
+    env_file:
+      - ./env/mongo.env
+    ports:
+      - 28017:27017
+  backend:
+    build:
+      context: ./Server
+      dockerfile: Dockerfile
+    #image: "bookStore-node"
+    container_name: "bookStore_backend"
+    ports:
+      - "3900:3900"
+    volumes:
+      - logs:/app/logs
+      - ./Server:/app
+      - /app/node_modules
+    env_file:
+      - ./env/backend.env
+    depends_on:
+      - mongodb
+  frontend:
+    build:
+      context: ./Client
+      dockerfile: Dockerfile
+    #image: "bookStore-react"
+    container_name: "bookStore_frontend"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./Client/src:/app/src
+    env_file:
+      - ./env/frontend.env
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+
+# Named Volumes Should Be Specified
+volumes:
+  data:
+  logs:

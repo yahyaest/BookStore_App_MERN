@@ -1,0 +1,1 @@
+{ "jwtPrivateKey": "test", "db": "mongodb://localhost/bookstore-app_test" }

@@ -1,0 +1,116 @@
+.ordered__books {
+  margin-top: 100px !important;
+  margin: auto;
+  width: 60%;
+}
+
+.ordered__book {
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0;
+  padding: 20px;
+  border: 1px solid crimson;
+  box-shadow: 2px 3px 5px crimson;
+  background-color: rgba(255, 217, 0, 0.055);
+}
+
+.ordered__book__title_android {
+  display: none;
+}
+
+.ordered__book__cover {
+  width: 30%;
+  margin: 0 20px;
+}
+.ordered__book__info {
+  width: 70%;
+  text-align: left;
+}
+
+.ordered__book__title,
+.ordered__book__author,
+.ordered__book__genre {
+  text-align: center;
+  margin-bottom: 30px;    
+}
+
+.ordered__book__title{  
+  font-weight:500;
+}
+
+.order__button {
+  margin: 0 auto !important ;
+  display: block !important;
+}
+
+@media screen and (max-width: 880px) {
+  .ordered__book__title {
+    display: none;
+  }
+
+  .ordered__book__title_android {
+    display: block;
+    font-size: 1.25rem;
+    font-weight:500;
+    margin-bottom: 20px;
+  }
+
+  .ordered__books {
+    width: 85%;
+    margin-top: 50px !important;
+  }
+  .ordered__book {
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .ordered__book__cover {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .ordered__book__info {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .ordered__book__info h5 {
+    font-size: 1rem;
+  }
+
+  .ordered__book__info h6,
+  strong {
+    font-size: 0.9rem;
+  }
+
+  .ordered__book__info p {
+    font-size: 0.75rem;
+  }
+
+  .ordered__book__info button {
+    width: 50%;
+    font-size: 0.5rem;
+    padding: 5px;
+    margin-bottom: 15px !important;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .ordered__book__info h5 {
+    font-size: 0.85rem;
+  }
+
+  .ordered__book__info h6,
+  strong {
+    font-size: 0.75rem;
+  }
+
+  .ordered__book__info p {
+    font-size: 0.6rem;
+  }
+
+}

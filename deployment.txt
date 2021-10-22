@@ -1,0 +1,23 @@
+// Backend:
+1-git init
+2- git add .
+3-git commit -m "ypur commit message"
+4-heroku login
+5-heroku create
+6-git push heroku master
+7-heroku config:set bookstore_db=mongodb+srv://yahya:25020680@cluster0.kf0nx.mongodb.net/bookstore-app
+8-heroku open
+9-heroku logs
+10-heroku config:get bookstore_db
+
+// Frontend
+1-npm run build 
+2-serve -s build // test production environment
+3-git init
+4-git add .
+5-git commit -m "ypur commit message"
+6-heroku login
+7-heroku create --buildpack mars/create-react-app
+8-git push heroku master
+9-heroku open
+
