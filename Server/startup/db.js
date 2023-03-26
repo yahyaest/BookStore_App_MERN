@@ -5,10 +5,14 @@ const config = require("config");
 module.exports = function () {
   const db = config.get("db");
 
+  console.log(
+    `DB : mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@mongodb:27017/bookstoreDocker-app?authSource=admin`
+  );
+
   mongoose
     .connect(
-      db,
-      // `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@mongodb:27017/bookstoreDocker-app?authSource=admin`,
+     // db,
+      `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@mongodb:27017/bookstoreDocker-app?authSource=admin`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,

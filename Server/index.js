@@ -7,6 +7,8 @@ require("./startup/routes")(app);
 require("./startup/db")();
 require("./startup/validation")();
 require("./startup/config")();
+const config = require("config");
+
 
 const port = process.env.PORT || config.get("port");
 
