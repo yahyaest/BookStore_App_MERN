@@ -28,17 +28,20 @@ const slice = createSlice({
       );
       let comment = { ...comments.comments[index] };
 
-      comment.like_counter = action.payload.$set.like_counter
-        ? action.payload.$set.like_counter
-        : comment.like_counter;
+      // For like_counter and dislike_counter, the value check with typeof to avoid getting false if the counter is 0
+      comment.like_counter =
+        typeof action.payload.$set.like_counter === "number"
+          ? action.payload.$set.like_counter
+          : comment.like_counter;
 
       comment.like_submitter = action.payload.$set.like_submitter
         ? action.payload.$set.like_submitter
         : comment.like_submitter;
 
-      comment.dislike_counter = action.payload.$set.dislike_counter
-        ? action.payload.$set.dislike_counter
-        : comment.dislike_counter;
+      comment.dislike_counter =
+        typeof action.payload.$set.dislike_counter === "number"
+          ? action.payload.$set.dislike_counter
+          : comment.dislike_counter;
 
       comment.dislike_submitter = action.payload.$set.dislike_submitter
         ? action.payload.$set.dislike_submitter

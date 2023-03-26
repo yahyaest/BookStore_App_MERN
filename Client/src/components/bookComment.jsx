@@ -144,16 +144,10 @@ function BookComment(props) {
           if (dislikeIndex !== -1) {
             submitter_dislike_list.splice(dislikeIndex, 1);
             tempComment.dislike_counter--;
-            if (tempComment.dislike_counter === 0) {
-              window.location.reload();
-            }
           }
         } else {
           submitter_like_list.splice(likeIndex, 1);
           tempComment.like_counter--;
-          if (tempComment.like_counter === 0) {
-            window.location.reload();
-          }
         }
       }
       if (type === "decrement") {
@@ -164,16 +158,10 @@ function BookComment(props) {
           if (likeIndex !== -1) {
             submitter_like_list.splice(likeIndex, 1);
             tempComment.like_counter--;
-            if (tempComment.like_counter === 0) {
-              window.location.reload();
-            }
           }
         } else {
           submitter_dislike_list.splice(dislikeIndex, 1);
           tempComment.dislike_counter--;
-          if (tempComment.dislike_counter === 0) {
-            window.location.reload();
-          }
         }
       }
 
