@@ -56,7 +56,7 @@ const slice = createSlice({
   },
 });
 
-console.log(slice);
+
 
 export const { commentAdded, commentloaded, commentRemoved } = slice.actions;
 export default slice.reducer;

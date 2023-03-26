@@ -25,7 +25,7 @@ const slice = createSlice({
   },
 });
 
-console.log(slice);
+
 
 export const { orderAdded, orderloaded, orderRemoved } = slice.actions;
 export default slice.reducer;

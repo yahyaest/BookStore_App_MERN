@@ -24,7 +24,7 @@ const slice = createSlice({
   },
 });
 
-console.log(slice);
+
 
 export const { bookAdded, bookloaded, bookRemoved } = slice.actions;
 export default slice.reducer;

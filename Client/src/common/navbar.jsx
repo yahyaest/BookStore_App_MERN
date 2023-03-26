@@ -31,8 +31,6 @@ function NavBar(props) {
 
   let history = useHistory();
 
-  console.log(isAdmin);
-
   useEffect(() => {
     window.addEventListener("mousedown", handleClickOutside);
 
