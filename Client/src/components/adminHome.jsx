@@ -32,7 +32,6 @@ function AdminHome(props) {
     addComment,
     addUser,
     updateUser,
-    updateAllUser,
     deleteUser,
     books,
     users,

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { forEach } from "lodash";
 import http from "../services/httpService";
 import { tokenConfig } from "./auth";
 

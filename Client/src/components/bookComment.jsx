@@ -26,7 +26,6 @@ function BookComment(props) {
   };
 
   const [newComment, setNewComment] = useState("");
-  const [bookComments, setBookComments] = useState([]);
 
   const [showReplies, setShowReplies] = useState([]);
   const [reply, setReply] = useState("");

@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 // Redux Store
 import store from "./store";
 import { loadUser } from "./redux/auth";
-import { loadUsers, loadCurrentUser } from "./redux/users";
+import { loadUsers } from "./redux/users";
 import { loadBooks } from "./redux/books";
 import { loadComments } from "./redux/comments";
 import { loadOrders } from "./redux/orders";

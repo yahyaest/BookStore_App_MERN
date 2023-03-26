@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { updateUser } from "./../redux/users";
 import { createMessage } from "../redux/messages";
 
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import _ from "lodash";
 import { toast } from "react-toastify";
 import NavBar from "./../common/navbar";

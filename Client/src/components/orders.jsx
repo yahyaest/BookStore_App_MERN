@@ -21,10 +21,6 @@ function Orders(props) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
 
-  const sleep = (ms) => {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  };
-
   const getOrderedBooks = async (username) => {
     const user = users.filter((user) => user.username === username);
     setOrderedBooks(user[0]?.ordered_books);

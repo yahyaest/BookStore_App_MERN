@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import http from "../services/httpService";
 import { tokenConfig } from "./auth";
-import { toast } from "react-toastify";
 
 const apiEndpoint = "/books";
 
