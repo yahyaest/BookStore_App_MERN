@@ -1,0 +1,17 @@
+yahya@yahya-debian ~/Projects/BookStore_App_MERN (master) $ docker exec -it mongodb  bash
+# root@d63960e5fadf:/# mongosh
+root@d63960e5fadf:/# mongosh mongodb://yahya_machat:secret@mongodb:27017/bookstoreDocker-app?authSource=admin
+bookstoreDocker-app> show databases
+bookstoreDocker-app> show collections
+
+bookstoreDocker-app> use admin
+admin> db.getUsers()
+db.createUser({ user: "yahya_machat", pwd: "secret", roles: [{ role: "readWrite", db: "bookstoreDocker-app" }] })
+admin> db.getUsers()
+
+admin> use bookstoreDocker-app
+
+bookstoreDocker-app> db.users.insertMany([{}, {}])
+
+
+
