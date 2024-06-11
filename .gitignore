@@ -1,0 +1,13 @@
+# dependencies
+Client/node_modules
+Server/node_modules
+
+# testing
+Client/coverage
+
+# production
+Client/build
+Client/build/*
+
+*/*.env
+

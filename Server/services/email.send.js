@@ -25,6 +25,9 @@ module.exports = async (to, content) => {
     to,
   };
 
+  console.log("contacts: ", contacts);
+  console.log("content: ", content);
+
   // Combining the content and contacts into a single object that can
   // be passed to Nodemailer.
   const email = Object.assign({}, content, contacts);
