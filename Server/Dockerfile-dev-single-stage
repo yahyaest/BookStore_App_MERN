@@ -1,15 +1,18 @@
 # Stage 1: Build the application
-FROM node:14-alpine AS builder
+FROM node:14 AS builder
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json .
+COPY package-lock.json .
 
 # Install dependencies
-RUN npm ci --only=production
+RUN npm install --production
 
 # Copy the rest of the application code
 COPY . .
+
+RUN npm run build
 
 # Stage 2: Final image
 FROM node:14-alpine
@@ -21,7 +24,9 @@ COPY --from=builder /app .
 
 EXPOSE 3900
 
+# Set environment variables
 ENV MONGODB_USERNAME=root
 ENV MONGODB_PASSWORD=secret
 
-CMD ["npm","start"]
+# Run the application
+CMD ["npm", "start"]
